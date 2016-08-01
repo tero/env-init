@@ -391,6 +391,6 @@ echo '*** change shell to zsh ***'
 chsh -s /bin/zsh
 
 echo '*** install dotfiles ***'
-git clone git://github.com/tero/dotfiles.git ~/.dotfiles
+git clone git://github.com/tero/dotfiles-1.git ~/.dotfiles
 cd ~/.dotfiles
 rake install

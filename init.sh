@@ -88,6 +88,9 @@ brew install tree
 echo '*** install wget ***'
 brew install wget
 
+echo '*** install tmux ***'
+brew install tmux
+
 #echo '*** install nodemon ***'
 #npm install -g nodemon
 

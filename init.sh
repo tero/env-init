@@ -100,6 +100,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 echo '*** install google chrome ***'
 brew cask install google-chrome
 
+echo '*** install firefox ***'
+brew cask install firefox
+
 echo '*** install google drive ***'
 brew cask install google-drive
 

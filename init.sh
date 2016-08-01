@@ -88,8 +88,8 @@ brew install tree
 echo '*** install wget ***'
 brew install wget
 
-echo '*** install nodemon ***'
-npm install -g nodemon
+#echo '*** install nodemon ***'
+#npm install -g nodemon
 
 echo '*** install git ***'
 brew install git
@@ -106,8 +106,8 @@ brew cask install google-drive
 echo '*** install dropbox ***'
 brew cask install dropbox
 
-echo '*** install transmission ***'
-brew cask install transmission
+#echo '*** install transmission ***'
+#brew cask install transmission
 
 echo '*** iterm2 ***'
 brew cask install iterm2
@@ -115,35 +115,23 @@ brew cask install iterm2
 echo '*** install slack ***'
 brew cask install slack
 
-echo '*** install skype ***'
-brew cask install skype
+#echo '*** install skype ***'
+#brew cask install skype
 
-echo '*** install steam ***'
-brew cask install steam
+#echo '*** install flux ***'
+#brew cask install flux
 
-echo '*** install league of legends ***'
-brew cask install league-of-legends
-
-echo '*** install open emu ***'
-brew cask install openemu
-
-echo '*** install alfred ***'
-brew cask install alfred
-
-echo '*** install flux ***'
-brew cask install flux
-
-echo '*** install hyperswitch ***'
-brew cask install hyperswitch
+#echo '*** install hyperswitch ***'
+#brew cask install hyperswitch
 
 echo '*** install keka ***'
 brew cask install keka
 
-echo '*** install scroll reverser ***'
-brew cask install scroll-reverser
+#echo '*** install scroll reverser ***'
+#brew cask install scroll-reverser
 
-echo '*** install razer synapse ***'
-brew cask install razer-synapse
+#echo '*** install razer synapse ***'
+#brew cask install razer-synapse
 
 echo '*** install spotify ***'
 brew cask install spotify
@@ -151,8 +139,8 @@ brew cask install spotify
 echo '*** install spotify notifications ***'
 brew cask install spotify-notifications
 
-echo '*** install spotifree ***'
-brew cask install spotifree
+#echo '*** install spotifree ***'
+#brew cask install spotifree
 
 echo '*** install vlc ***'
 brew cask install vlc
@@ -160,9 +148,8 @@ brew cask install vlc
 echo '*** install cakebrew ***'
 brew cask install cakebrew
 
-echo '*** install sublime text 3 ***'
-brew tap caskroom/versions
-brew cask install sublime-text3
+echo '*** install Atom ***'
+brew cask install atom
 
 echo '*** cleaning up cask installs ***'
 brew cask cleanup
@@ -184,25 +171,25 @@ sudo scutil --set LocalHostName $computer_name
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $computer_name
 
 # Set standby delay to 24 hours
-echo '*** set standby delay ***'
-sudo pmset -a standbydelay 86400
+#echo '*** set standby delay ***'
+#sudo pmset -a standbydelay 86400
 
 # Link Cask Apps to Alfred
-echo '*** link cask apps to alfred ***'
-brew cask alfred link
+#echo '*** link cask apps to alfred ***'
+#brew cask alfred link
 
 # Disable the warning before emptying the Trash
 echo '*** disable warning before emptying the trash ***'
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Show the ~/Library folder
-echo '*** show the ~/Library folder ***'
-chflags nohidden ~/Library
+#echo '*** show the ~/Library folder ***'
+#chflags nohidden ~/Library
 
 # Remove Dropbox’s green checkmark icons in Finder
-echo '*** remove the dropbox green checkmark from icons ***'
-file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
-[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
+#echo '*** remove the dropbox green checkmark from icons ***'
+#file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
+#[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
 
 # Speed up Mission Control animations
 echo '*** speed up mission control animations ***'
@@ -213,20 +200,20 @@ echo '*** stop time machine from asking about new drives ***'
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable Dashboard
-echo '*** disable dashboard ***'
-defaults write com.apple.dashboard mcx-disabled -bool true
+#echo '*** disable dashboard ***'
+#defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Make Dock icons of hidden applications translucent
 echo '*** make hidden app icons translucent ***'
 defaults write com.apple.dock showhidden -bool true
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
-echo '*** disable launchpad gesture ***'
-defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
+#echo '*** disable launchpad gesture ***'
+#defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
-echo '*** add the keyboard shortcut ⌘ + Enter to send an email ***'
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
+#echo '*** add the keyboard shortcut ⌘ + Enter to send an email ***'
+#defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
 
 # Disable prompt when quitting iterm2
 echo '*** Disable prompt when quitting iterm2 ***'
@@ -237,12 +224,12 @@ echo '*** stop automatically rearranging spaces based on time ***'
 defaults write com.apple.dock mru-spaces -bool false
 
 # Menu bar: hide the Time Machine and User icons
-echo '*** hide the time machine and user icons from the menu bar ***'
-for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-  defaults write "${domain}" dontAutoLoad -array \
-    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-    "/System/Library/CoreServices/Menu Extras/User.menu"
-done
+#echo '*** hide the time machine and user icons from the menu bar ***'
+#for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
+#  defaults write "${domain}" dontAutoLoad -array \
+#    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+#    "/System/Library/CoreServices/Menu Extras/User.menu"
+#done
 
 # Set sidebar icon size to medium
 echo '*** set sidebar icons in finder to medium size ***'
@@ -285,29 +272,29 @@ echo '*** set clock to 24-hour mode ***'
 defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
 
 # disable hibernate
-echo '*** disable hibernate ***'
-sudo pmset -a hibernatemode 0
+#echo '*** disable hibernate ***'
+#sudo pmset -a hibernatemode 0
 
 # disable sudden motion sensor
-echo '*** disable the sudden motion sensor ***'
-sudo pmset -a sms 0
+#echo '*** disable the sudden motion sensor ***'
+#sudo pmset -a sms 0
 
 # increase Bluetooth sound quality
 echo '*** increase bluetooth sound quality ***'
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # disable press-and-hold for special keys
-echo '*** disable special key press-and-hold ***'
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+#echo '*** disable special key press-and-hold ***'
+#defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # increase key repeat rate
 echo '*** increase key repeat rate ***'
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 # disable auto-brightness on keyboard and screen
-echo '*** disable auto-brightness ***'
-sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool false
-sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
+#echo '*** disable auto-brightness ***'
+#sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool false
+#sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool false
 
 # create folder for screenshots in documents
 echo '*** create folder for screenshots in documents ***'
@@ -352,16 +339,16 @@ echo '*** disable focus ring ***'
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
 
 # reformat copying email addresses
-echo '*** reformat copying email addresses in mail.app ***'
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+#echo '*** reformat copying email addresses in mail.app ***'
+#defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # show battery percentage
 echo '*** show battery percentage ***'
 defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 
 #disable gatekeeper
-echo '*** disable gatekeeper ***'
-sudo spctl --master-disable
+#echo '*** disable gatekeeper ***'
+#sudo spctl --master-disable
 
 # disable npm progress bar (doubles install speed)
 echo '*** disable npm progress bar ***'
@@ -377,7 +364,7 @@ defaults write com.apple.CrashReporter UseUNC 1
 
 # create global .gitignore
 echo '*** create global .gitignore ***'
-curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/gitignore.txt > ~/.gitignore
+curl -# https://raw.githubusercontent.com/tero/env-init/master/assets/gitignore.txt > ~/.gitignore
 
 # set git user info and credentials
 echo '*** set git user info and credentials ***'
@@ -394,76 +381,13 @@ echo '*** disable local time machine snapshots ***'
 sudo tmutil disablelocal
 
 
-
-#############################
-### Transmission Settings ###
-#############################
-
-# setup folder for incomplete torrents
-echo '*** set up folder for incomplete torrents ***'
-mkdir -p ~/Downloads/Incomplete
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
-
-# hide donate message
-echo '*** hide transmission donate message ***'
-defaults write org.m0k.transmission WarningDonate -bool false
-
-# hide legal warning
-echo '*** hide transmission legal warning ***'
-defaults write org.m0k.transmission WarningLegal -bool false
-
-# auto resize window
-echo '*** auto resize transmission window ***'
-defaults write org.m0k.transmission AutoSize -bool true
-
-# setting block-list
-echo '*** set up transmission block-list ***'
-defaults write org.m0k.transmission EncryptionRequire -bool true
-defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-defaults write org.m0k.transmission BlocklistNew -bool true
-defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
-
-
-
-#############################
-### Sublime Text Settings ###
-#############################
-
-# create symlink to sublime
-echo '*** create symlink to sublime text ***'
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
-# open sublime to initialize filepaths
-echo '*** open sublime to initialize filepaths ***'
-subl
-
-# set sublime as default text editor in git
-echo '*** set sublime text as default text editor in git ***'
-git config --global core.editor "subl -n -w"
-
-#set sublime as default text editor os-wide
-echo '*** set sublime text as default text editor os-wide ***'
-defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
-'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
-
-# set sublime packages
-echo '*** set sublime packages ***'
-curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-packages.txt > /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
-
-# download sublime package manager
-echo '*** download sublime package manager ***'
-curl -# https://sublime.wbond.net/Package%20Control.sublime-package > /Users/$USER/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
-
-# set sublime settings
-echo '*** set sublime preferences ***'
-curl -# https://raw.githubusercontent.com/theavish/env-init/master/assets/sublime-preferences.txt > /Users/$USER/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings
-
-
-
 #######################
-### install ohmyzsh ###
+### install dotflies ###
 #######################
+echo '*** change shell to zsh ***'
+chsh -s /bin/zsh
 
-echo '*** install ohmyzsh ***'
-sh -c "$(curl -#fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo '*** install dotfiles ***'
+git clone git://github.com/tero/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+rake install

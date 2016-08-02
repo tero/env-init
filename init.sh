@@ -393,6 +393,15 @@ apm install zen
 apm install atom-alignment
 apm install atom-beautify
 apm install color-picker
+apm install editorconfig
+apm install linter
+apm install linter-alex
+apm install linter-jshint
+apm install linter-scss-lint
+apm install merge-conflicts
+apm install vim-mode
+apm install vim-surround
+apm install editorconfig
 
 #######################
 ### install dotflies ###

@@ -386,6 +386,13 @@ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 echo '*** disable local time machine snapshots ***'
 sudo tmutil disablelocal
 
+#############################
+### Install Atom packages ###
+#############################
+apm install zen
+apm install atom-alignment
+apm install atom-beautify
+apm install color-picker
 
 #######################
 ### install dotflies ###

@@ -402,6 +402,7 @@ apm install merge-conflicts
 apm install vim-mode
 apm install vim-surround
 apm install editorconfig
+apm install docblockr
 
 #######################
 ### install dotflies ###

@@ -418,6 +418,11 @@ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 echo '*** disable local time machine snapshots ***'
 sudo tmutil disablelocal
 
+#Install solarized theme for Iterm2
+echo '*** install dark solarized theme for iterm2'
+curl -# https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors > "~/Downloads/Solarized Dark.itermcolors"
+open "~/Downloads/Solarized Dark.itermcolors"
+
 #############################
 ### Install Atom packages ###
 #############################

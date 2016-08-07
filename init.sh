@@ -76,8 +76,12 @@ echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 echo '*** install brew cask ***'
 brew install caskroom/cask/brew-cask
 
-echo '*** install node/npm ***'
-brew install node
+echo '*** install nvm ***'
+brew install nvm
+    
+echo "*** install nodejs ***"
+nvm install node
+nvm use node
 
 echo '*** install mongo ***'
 brew install mongo

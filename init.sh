@@ -379,6 +379,27 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
 echo '*** change crash reporter to notification ***'
 defaults write com.apple.CrashReporter UseUNC 1
 
+# Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# Bottom left screen corner → Start screen saver
+echo '*** add bottom left hot corner start screen saver ***'
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 0
+# Bottom right screen corner → Put display to sleep
+echo '*** add bottom right hot corner put display to sleep ***'
+defaults write com.apple.dock wvous-br-corner -int 10
+defaults write com.apple.dock wvous-br-modifier -int 0
+
 # create global .gitignore
 echo '*** create global .gitignore ***'
 curl -# https://raw.githubusercontent.com/tero/env-init/master/assets/gitignore.txt > ~/.gitignore

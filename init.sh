@@ -297,6 +297,9 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 echo '*** increase key repeat rate ***'
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+echo "*** set a shorter Delay until key repeat ***"
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
 # disable auto-brightness on keyboard and screen
 #echo '*** disable auto-brightness ***'
 #sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool false

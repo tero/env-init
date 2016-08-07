@@ -343,9 +343,9 @@ echo '*** enable snap to grid ***'
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
-# set column view as default
-echo '*** set column view as default in finder ***'
-defaults write com.apple.finder FXPreferredViewStyle Clmv
+# set list view as default
+echo '*** set list view as default in finder ***'
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
 
 # set dock icons to 48px
 echo '*** set dock icons to 48px ***'

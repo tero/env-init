@@ -188,6 +188,10 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 #echo '*** link cask apps to alfred ***'
 #brew cask alfred link
 
+# Require password after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 5
+
 # Disable the warning before emptying the Trash
 echo '*** disable warning before emptying the trash ***'
 defaults write com.apple.finder WarnOnEmptyTrash -bool false

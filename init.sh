@@ -440,6 +440,7 @@ apm install vim-mode
 apm install vim-surround
 apm install editorconfig
 apm install docblockr
+apm install react
 
 #######################
 ### install dotflies ###

@@ -379,6 +379,9 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
 echo '*** change crash reporter to notification ***'
 defaults write com.apple.CrashReporter UseUNC 1
 
+# Show week numbers
+defaults write com.apple.iCal "Show Week Numbers" -bool true
+
 # Hot corners
 # Possible values:
 #  0: no-op

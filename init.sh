@@ -444,6 +444,7 @@ apm install vim-surround
 apm install editorconfig
 apm install docblockr
 apm install react
+apm install linter-eslint
 
 #######################
 ### install dotflies ###

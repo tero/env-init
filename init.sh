@@ -78,6 +78,9 @@ brew install caskroom/cask/brew-cask
 
 echo '*** install nvm ***'
 brew install nvm
+mkdir ~/.nvm
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
     
 echo "*** install nodejs ***"
 nvm install node

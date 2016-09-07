@@ -98,6 +98,9 @@ brew install tmux
 #echo '*** install nodemon ***'
 #npm install -g nodemon
 
+echo '*** install vim ***'
+brew install vim
+
 echo '*** install git ***'
 brew install git
 
@@ -172,6 +175,7 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 ### Python stuff ###
 ####################
 
+sudo easy_install pip
 pip install virtualenv virtualenvwrapper
 
 #########################
